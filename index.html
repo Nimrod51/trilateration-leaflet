@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Leaflet Draw Circle Example</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <!-- <link rel="stylesheet" href="css/leaflet.draw.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+    
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.draw.js"></script>
+    <script src="js/leaflet.awesome-markers.min.js"></script>
+    <script src='js/turf.min.js'></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <style>
+    #map { height: 650px; width: 900px;}
+    /* Style for the result container */
+    .result-container {
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+    color: #333;
+    width: 850px;
+    }
+    /* Style for the button */
+    #calculateButton {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px;
+    display: inline-block; /* Ensures the button is inline with the text in the result container */
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Trilateration</h1>
+    <p>This map allows trilaterating three circles that intersect to show the approximate user location. Follow these steps:</p>
+    <ol>
+      <li>Draw 3 circles that demonstrate the known locations, with the radius displayed being the known distance</li>
+      <li>Click Find My Location to obtain the user location</li>
+      <li>View results below</li>
+    </ol>
+    <button id="calculateButton" onclick="calculate()">Find My Location</button>
+    <div id="map"></div>
+    <div class="result-container" id="resultDiv">
+      Result will be displayed here
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
