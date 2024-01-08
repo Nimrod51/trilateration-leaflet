@@ -1,4 +1,4 @@
-# Trilateration Script Using Leaflet and Turf.js
+# Trilateration Using Leaflet and Turf.js
 
 This repository contains a simple HTML-based trilateration script that demonstrates the concept of trilateration using Leaflet and Turf.js libraries. Trilateration is a technique used to determine an unknown position using the distances between that position and known locations.
 
